@@ -17,59 +17,73 @@ If you are developing a production application, we recommend updating the config
 
 ```js
 export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+  # stream-chess
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+  Descrição curta
+  ---------------
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+  `stream-chess` é uma aplicação minimalista em React + TypeScript (Vite) para visualizar e buscar informações de partidas de xadrez, com componentes prontos e integração com uma API de xadrez.
 
-```
+  Principais recursos
+  -------------------
+  - Interface em React com componentes reutilizáveis (`header`, `footer`, `card`, `search`).
+  - Integração com API de xadrez (`src/services/chessApi.ts`).
+  - Estrutura preparada para desenvolvimento rápido com Vite.
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+  Tecnologias
+  ----------
+  - React
+  - TypeScript
+  - Vite
+  - ESLint (configuração básica)
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+  Como rodar (desenvolvimento)
+  -----------------------------
+  Pré-requisitos: `node` (v16+) e `npm` ou `pnpm`.
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+  1. Instalar dependências:
 
-```
+  ```
+  npm install
+  ```
+
+  2. Rodar em modo desenvolvimento (HMR):
+
+  ```
+  npm run dev
+  ```
+
+  Build e preview
+  ----------------
+
+  Gerar build de produção:
+
+  ```
+  npm run build
+  ```
+
+  Servir build localmente para testar:
+
+  ```
+  npm run preview
+  ```
+
+  Estrutura rápida do projeto
+  --------------------------
+  - `src/` — código fonte
+    - `components/` — componentes React
+    - `services/chessApi.ts` — integração com API
+  - `public/` — assets públicos
+
+  Contribuição
+  ------------
+  - Abra uma issue descrevendo o problema ou a melhoria.
+  - Envie um Pull Request com mudanças pequenas e testes quando aplicável.
+
+  Licença
+  -------
+  Escolha a licença desejada ou mantenha conforme o repositório original (ex: MIT).
+
+  Mais informações
+  ----------------
+  Veja a interface do projeto e os componentes em `src/` para entender como estender ou integrar novas funcionalidades.
