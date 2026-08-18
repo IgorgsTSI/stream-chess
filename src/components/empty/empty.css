@@ -1,0 +1,10 @@
+.empty {
+  padding: 24px;
+  border-radius: 10px;
+  background: var(--panel);
+  color: var(--text);
+  text-align: center;
+  box-shadow: var(--shadow);
+}
+.empty h3 { margin: 0 0 8px; font-size: 1.05rem; color: var(--text-h); }
+.empty p { margin: 0; font-size: 0.95rem; color: var(--text); }

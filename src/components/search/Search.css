@@ -1,0 +1,17 @@
+.sc-search {
+  padding: 16px 24px;
+}
+
+.sc-search-input {
+  width: 100%;
+  max-width: 720px;
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+.sc-search-input:focus {
+  outline: 2px solid var(--accent-bg);
+}

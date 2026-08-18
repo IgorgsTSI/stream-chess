@@ -1,0 +1,16 @@
+.sc-footer {
+  padding: 18px 24px;
+  border-top: 1px solid var(--border);
+  margin-top: auto;
+  background: transparent;
+}
+
+.sc-footer-inner {
+  max-width: 1126px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.sc-footer small {
+  color: var(--text);
+}

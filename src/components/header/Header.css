@@ -1,0 +1,18 @@
+.sc-header {
+  padding: 20px 24px;
+  background: transparent;
+}
+
+.sc-header-inner {
+  max-width: 1126px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sc-header h1 {
+  margin: 0;
+  font-size: 40px;
+  color: var(--text-h);
+}
